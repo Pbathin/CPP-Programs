@@ -1,0 +1,27 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter value for n: ";
+    cin >> n;
+
+    vector<int> arr(n);  // Using vector for dynamic array
+
+    cout << "Enter values into array:\n";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    int max = arr[0];  // Initialize max with the first element
+
+    for (int i = 1; i < n; i++) {  // Start from second element
+        if (arr[i] > max)
+            max = arr[i];
+    }
+
+    cout << "The largest element is: " << max << endl;
+
+    return 0;
+}
